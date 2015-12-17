@@ -8,6 +8,10 @@
     "bower_components/paper-toolbar/paper-toolbar.html",
     "bower_components/paper-tabs/paper-tabs.html",
     "bower_components/paper-tabs/paper-tab.html",
-    "bower_components/paper-icon-button/paper-icon-button.html"
+    "bower_components/paper-icon-button/paper-icon-button.html",
+    "bower_components/paper-drawer-panel/paper-drawer-panel.html",
+    "bower_components/paper-header-panel/paper-header-panel.html",
+    "bower_components/paper-toolbar/paper-toolbar.html",
+    "bower_components/iron-flex-layout/classes/iron-flex-layout.html"
   ]
 }

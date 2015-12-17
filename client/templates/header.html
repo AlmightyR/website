@@ -1,21 +1,25 @@
 <template name="header">
-  <paper-toolbar>
-    <!--@TODO: Add round miniature photo here (left of title).-->
+  <paper-drawer-panel>
+    <!--Drawer Area-->
+    <paper-header-panel mode="waterfall" drawer>
+      <!--Drawer Area Title-->
+      <paper-toolbar>
+        <paper-icon-button icon="arrow-back" on-tap="closeMenuAction"></paper-icon-button>
+        <div class="title">Menu</div>
+      </paper-toolbar>
 
-    <div class="title">Rodrigo Legendre</div>
+      <!--Drawer Area Content-->
+      <div> Drawer content... </div>
+    </paper-header-panel>
 
-    <!--@TODO: Hide on small screens-->
-    <paper-tabs id="nav-tabs" selected="0">
-      <paper-tab flex center-center><a href="/">Home</a></paper-tab>
-      <paper-tab><a href="/about">About</a></paper-tab>
-      <paper-tab><a href="#">TAB 3</a></paper-tab>
-    </paper-tabs>
-
-    <!--
-    @TODO:
-    - Only display on small screens or if nav items can't fit the navbar.
-    - Add a space to separate from other nav-bar stuff to prevent miss-input.
-    -->
-    <paper-icon-button icon="menu" on-tap="navMenuAction"></paper-icon-button>
-  </paper-toolbar>
+    <!--Main Area-->
+    <paper-header-panel mode="waterfall-tall" main>
+      <paper-toolbar>
+        <paper-icon-button icon="menu" on-tap="menuAction"></paper-icon-button>
+        <div class="title">Rodrigo Legendre</div>
+        <paper-icon-button icon="more-vert" on-tap="moreAction"></paper-icon-button>
+      </paper-toolbar>
+      {{> Template.dynamic template=content}}
+    </paper-header-panel>
+  </paper-drawer-panel>
 </template>
