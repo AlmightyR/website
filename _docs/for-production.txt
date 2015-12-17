@@ -1,0 +1,2 @@
+Use "VULCANIZE=true" before Meteor's commands:
+    "VULCANIZE=true meteor deploy" or "VULCANIZE=true meteor build"
