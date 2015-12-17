@@ -1,0 +1,23 @@
+{
+  "name": "mywebsite_2",
+  "description": "My website",
+  "main": "client/index.html",
+  "moduleType": [],
+  "keywords": [
+    "Meteor",
+    "Polymer"
+  ],
+  "authors": [
+    "Rodrigo Legendre Lima Rodrigues (AlmightyR)"
+  ],
+  "license": "MIT",
+  "homepage": "rodrigolegendre.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
