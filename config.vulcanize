@@ -1,0 +1,9 @@
+{
+  "polyfill": "/bower_components/webcomponentsjs/webcomponents.min.js",
+  "useShadowDom": true,
+  "imports": [
+    "bower_components/font-roboto/roboto.html",
+    "bower_components/iron-icons/iron-icons.html",
+    "bower_components/iron-icon/iron-icon.html"
+  ]
+}
