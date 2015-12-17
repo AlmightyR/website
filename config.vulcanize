@@ -4,6 +4,10 @@
   "imports": [
     "bower_components/font-roboto/roboto.html",
     "bower_components/iron-icons/iron-icons.html",
-    "bower_components/iron-icon/iron-icon.html"
+    "bower_components/iron-icon/iron-icon.html",
+    "bower_components/paper-toolbar/paper-toolbar.html",
+    "bower_components/paper-tabs/paper-tabs.html",
+    "bower_components/paper-tabs/paper-tab.html",
+    "bower_components/paper-icon-button/paper-icon-button.html"
   ]
 }
