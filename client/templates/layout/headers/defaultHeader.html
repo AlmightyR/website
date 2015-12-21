@@ -1,0 +1,53 @@
+<template name="defaultHeader">
+  <paper-drawer-panel force-narrow>
+    <!--Drawer Area-->
+    <!--@TODO: Hide when on wide screens-->
+    <paper-header-panel mode="waterfall" drawer>
+      <!--Drawer Area Header-->
+      <paper-toolbar>
+        <!--@TODO: Make this button close the drawer-->
+        <paper-icon-button icon="arrow-back"></paper-icon-button>
+        <div justified class="title">Menu</div>
+      </paper-toolbar>
+
+      <!--Drawer Area Content-->
+      <!--@WIP: Generate this drawer nav (and traditional's) from centralized location-->
+      <paper-menu selected="{{navSelection}}">
+        {{#each navItem}}
+        <paper-item role="menuitem">
+          <a href="{{this.path}}">
+            <iron-icon icon="{{this.icon}}"></iron-icon>
+            {{this.text}}
+          </a>
+        </paper-item>
+        {{/each}}
+      </paper-menu>
+    </paper-header-panel>
+
+    <!--Main Area-->
+    <paper-header-panel mode="waterfall" main>
+      <!--Main Area Header-->
+      <paper-toolbar>
+        <!--@TODO: Hide this button in large screens (use traditional nav-bar)-->
+        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        <!--Title/Logo-->
+        <div class="title"><h1>Rodrigo Legendre</h1></div>
+        <!--Traditional Nav-Bar-->
+        <!--@TODO: Hide on small screens-->
+        <!--@WIP: Generate this traditional nav (and drawer's) from centralized location-->
+        <paper-tabs selected="{{navSelection}}">
+          {{#each navItem}}
+          <paper-tab>
+            <a href="{{this.path}}">
+              {{this.text}}
+            </a>
+          </paper-tab>
+          {{/each}}
+        </paper-tabs>
+        <paper-icon-button icon="more-vert"></paper-icon-button>
+      </paper-toolbar>
+      <!--Main Area Content-->
+      {{> Template.dynamic template=content}}
+    </paper-header-panel>
+  </paper-drawer-panel>
+</template>
