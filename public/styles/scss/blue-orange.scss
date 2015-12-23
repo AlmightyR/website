@@ -1,0 +1,681 @@
+/*=====IMPORTS=====*/
+/*Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Damion);
+
+/*=====VARIABLES=====*/
+/*Fonts*/
+$open_sans: "Open Sans";
+$damion: "Damion";
+/*Fallback Fonts*/
+$fallback_fonts: "Arial", "sans-serif";
+/*Font Stacks*/
+$default_font_stack: $open_sans, $fallback_fonts;
+
+/*Colors*/
+$color_log_cabin_approx: #212121;
+$white: #ffffff;
+$alabaster: #fafafa;
+$color_storm_dust_approx: #616161;
+$color_california_approx: #ff9800;
+$color_picton_blue_approx: #3ea1e6;
+$color_malibu_approx: #7ec0ee;
+$color_periwinkle_gray_approx: #c5cae9;
+$color_violet_red_approx: #ff4081;
+$color_regent_gray_approx: #7e8d9d;
+$color_bon_jour_approx: #e0e0e0;
+$color_dodger_blue_approx: #2196f3;
+$color_star_dust_approx: #9e9e9e;
+$color_silver_chalice_approx: #a8aca5;
+$color_chestnut_rose_approx: #db5656;
+$color_amber_approx: #ffc107;
+$color_cape_cod_approx: #424540;
+$color_sushi_approx: #8bc34a;
+$color_gossamer_approx: #009688;
+$color_saffron_approx: #fbc02d;
+$color_red_orange_approx: #f44336;
+$color_solitude_approx: #e9f5fe;
+$color_dodger_blue_20_approx: rgba(33, 150, 243, 0.2);
+$color_old_lace_approx: #fff5e6;
+$color_california_20_approx: rgba(255, 152, 0, 0.2);
+$color_feta_approx: #f3f9ed;
+$color_sushi_20_approx: rgba(139, 195, 74, 0.2);
+$color_aqua_squeeze_approx: #e6f5f3;
+$color_gossamer_20_approx: rgba(0, 150, 136, 0.2);
+$color_buttery_white_approx: #fff9ea;
+$color_saffron_20_approx: rgba(251, 192, 45, 0.2);
+$color_fair_pink_approx: #feeceb;
+$color_red_orange_20_approx: rgba(244, 67, 54, 0.2);
+$color_venice_blue_approx: #08528d;
+$color_cinnamon_approx: #804c00;
+$color_green_leaf_approx: #496a23;
+$color_bright_turquoise_approx: #17ffe9;
+$color_buttered_rum_approx: #a57703;
+$color_totem_pole_approx: #a21309;
+
+//@extend-elements
+//original selectors
+//html, body
+%global_commons {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  color: $color_log_cabin_approx;
+  background-color: $white;
+  font-family: $default_font_stack;
+  font-weight: 400;
+}
+
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%h_commons {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+//original selectors
+//paper-icon-button.primary:hover, paper-icon-button.btn-primary:hover, paper-icon-button[primary]:hover
+%paper-icon-button_primary_hover_commons {
+  background-color: $color_solitude_approx;
+  background-color: $color_dodger_blue_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-icon-button.secondary:hover, paper-icon-button.btn-secondary:hover, paper-icon-button[secondary]:hover
+%paper-icon-button_secondary_hover_commons {
+  background-color: $color_old_lace_approx;
+  background-color: $color_california_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-icon-button.success:hover, paper-icon-button.btn-success:hover, paper-icon-button[success]:hover
+%paper-icon-button_success_hover_commons {
+  background-color: $color_feta_approx;
+  background-color: $color_sushi_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-icon-button.info:hover, paper-icon-button.btn-info:hover, paper-icon-button[info]:hover
+%paper-icon-button_info_hover_commons {
+  background-color: $color_aqua_squeeze_approx;
+  background-color: $color_gossamer_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-icon-button.warning:hover, paper-icon-button.btn-warning:hover, paper-icon-button[warning]:hover
+%paper-icon-button_warning_hover_commons {
+  background-color: $color_buttery_white_approx;
+  background-color: $color_saffron_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-icon-button.error:hover, paper-icon-button.btn-error:hover, paper-icon-button[error]:hover
+%paper-icon-button_error_hover_commons {
+  background-color: $color_fair_pink_approx;
+  background-color: $color_red_orange_20_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+}
+
+//original selectors
+//paper-dialog h1, paper-dialog h2, paper-dialog h3, paper-dialog h4, paper-dialog h5, paper-dialog h6
+%paper-dialog_h_commons {
+  overflow: visible;
+  padding: 0 1em;
+  text-align: center;
+}
+
+//original selectors
+//paper-fab.primary, paper-fab.btn-primary, paper-fab[primary]
+%paper-fab_primary_commons {
+  background-color: $color_dodger_blue_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_venice_blue_approx;
+}
+
+//original selectors
+//paper-fab.secondary, paper-fab.btn-secondary, paper-fab[secondary]
+%paper-fab_secondary_commons {
+  background-color: $color_california_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_cinnamon_approx;
+}
+
+//original selectors
+//paper-fab.success, paper-fab.btn-success, paper-fab[success]
+%paper-fab_success_commons {
+  background-color: $color_sushi_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_green_leaf_approx;
+}
+
+//original selectors
+//paper-fab.info, paper-fab.btn-info, paper-fab[info]
+%paper-fab_info_commons {
+  background-color: $color_gossamer_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_bright_turquoise_approx;
+}
+
+//original selectors
+//paper-fab.warning, paper-fab.btn-warning, paper-fab[warning]
+%paper-fab_warning_commons {
+  background-color: $color_saffron_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_buttered_rum_approx;
+}
+
+//original selectors
+//paper-fab.error, paper-fab.btn-error, paper-fab[error]
+%paper-fab_error_commons {
+  background-color: $color_red_orange_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_totem_pole_approx;
+}
+
+/*=====CSS Rules=====*/
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  @extend %global_commons;
+}
+body {
+  @extend %global_commons;
+}
+section {
+  padding: 40px 0;
+  &.hero paper-menu {
+    --paper-menu-background-color: $alabaster;
+  }
+}
+section[hero] {
+  background-color: $alabaster;
+  paper-menu {
+    --paper-menu-background-color: $alabaster;
+  }
+}
+h1 {
+  @extend %h_commons;
+  font-family: $default_font_stack;
+  font-size: 50px;
+  margin: 30px 0;
+}
+h2 {
+  @extend %h_commons;
+  color: $color_storm_dust_approx;
+  font-size: 35px;
+  margin: 20px 0;
+}
+h3 {
+  @extend %h_commons;
+  font-family: $default_font_stack;
+  font-size: 25px;
+  margin: 15px 0;
+}
+h4 {
+  @extend %h_commons;
+  font-size: 20px;
+}
+h5 {
+  @extend %h_commons;
+  font-family: $default_font_stack;
+}
+h6 {
+  @extend %h_commons;
+}
+a {
+  color: $color_california_approx;
+  text-decoration: none;
+  &:active {
+    color: $color_california_approx;
+    text-decoration: none;
+  }
+  &:visited {
+    color: $color_california_approx;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $color_california_approx;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $color_california_approx;
+    text-decoration: underline;
+  }
+}
+:root {
+  --default-primary-color: $color_picton_blue_approx;
+  --dark-primary-color: $color_malibu_approx;
+  --light-primary-color: $color_periwinkle_gray_approx;
+  --text-primary-color: $white;
+  --accent-color: $color_violet_red_approx;
+  --primary-background-color: $white;
+  --primary-text-color: $color_log_cabin_approx;
+  --secondary-text-color: $color_storm_dust_approx;
+  --disabled-text-color: $color_regent_gray_approx;
+  --divider-color: $color_bon_jour_approx;
+  --paper-checkbox-checked-color: $color_dodger_blue_approx;
+  --paper-checkbox-checked-ink-color: $color_picton_blue_approx;
+  --paper-checkbox-unchecked-color: $color_star_dust_approx;
+  --paper-checkbox-unchecked-ink-color: $color_regent_gray_approx;
+  --paper-checkbox-label-color: $color_log_cabin_approx;
+  --paper-fab-background: $color_picton_blue_approx;
+  --paper-fab-disabled-background: $color_star_dust_approx;
+  --paper-fab-disabled-text: $color_regent_gray_approx;
+  --paper-icon-button-disabled-text: $color_star_dust_approx;
+  --paper-input-container-color: $color_silver_chalice_approx;
+  --paper-input-container-focus-color: $color_picton_blue_approx;
+  --paper-input-container-invalid-color: $color_chestnut_rose_approx;
+  --paper-input-container-input-color: $color_silver_chalice_approx;
+  --paper-menu-background-color: $alabaster;
+  --paper-menu-color: $color_log_cabin_approx;
+  --paper-menu-disabled-color: $color_star_dust_approx;
+  --paper-progress-active-color: $color_dodger_blue_approx;
+  --paper-progress-secondary-color: $color_amber_approx;
+  --paper-radio-button-checked-color: $color_dodger_blue_approx;
+  --paper-radio-button-checked-ink-color: $white;
+  --paper-radio-button-unchecked-color: $color_star_dust_approx;
+  --paper-radio-button-unchecked-ink-color: $color_cape_cod_approx;
+  --paper-radio-button-label-color: $color_log_cabin_approx;
+  --paper-slider-knob-color: $color_dodger_blue_approx;
+  --paper-slider-active-color: $color_dodger_blue_approx;
+  --paper-slider-pin-color: $color_dodger_blue_approx;
+  --paper-spinner-layer-1-color: $color_dodger_blue_approx;
+  --paper-spinner-layer-2-color: $color_dodger_blue_approx;
+  --paper-spinner-layer-3-color: $color_dodger_blue_approx;
+  --paper-spinner-layer-4-color: $color_dodger_blue_approx;
+  --paper-tabs-selection-bar-color: $color_california_approx;
+  --paper-tab-ink: $white;
+  --paper-toggle-button-checked-bar-color: $color_dodger_blue_approx;
+  --paper-toggle-button-checked-button-color: $color_dodger_blue_approx;
+  --paper-toggle-button-checked-ink-color: $color_dodger_blue_approx;
+  --paper-toggle-button-unchecked-bar-color: $color_star_dust_approx;
+  --paper-toggle-button-unchecked-button-color: $white;
+  --paper-toggle-button-unchecked-ink-color: $white;
+  --paper-toolbar-background: $color_dodger_blue_approx;
+  --paper-toolbar-color: $color_log_cabin_approx;
+}
+paper-button {
+  &.primary {
+    color: $color_dodger_blue_approx;
+  }
+  &.btn-primary {
+    color: $color_dodger_blue_approx;
+  }
+  &.primary[raised] {
+    background-color: $color_dodger_blue_approx;
+    color: $white;
+  }
+  &.btn-primary[raised] {
+    background-color: $color_dodger_blue_approx;
+    color: $white;
+  }
+  &.secondary {
+    color: $color_california_approx;
+  }
+  &.btn-secondary {
+    color: $color_california_approx;
+  }
+  &.secondary[raised] {
+    background-color: $color_california_approx;
+    color: $white;
+  }
+  &.btn-secondary[raised] {
+    background-color: $color_california_approx;
+    color: $white;
+  }
+  &.success {
+    color: $color_sushi_approx;
+  }
+  &.btn-success {
+    color: $color_sushi_approx;
+  }
+  &.success[raised] {
+    background-color: $color_sushi_approx;
+    color: $white;
+  }
+  &.btn-success[raised] {
+    background-color: $color_sushi_approx;
+    color: $white;
+  }
+  &.info {
+    color: $color_gossamer_approx;
+  }
+  &.btn-info {
+    color: $color_gossamer_approx;
+  }
+  &.info[raised] {
+    background-color: $color_gossamer_approx;
+    color: $white;
+  }
+  &.btn-info[raised] {
+    background-color: $color_gossamer_approx;
+    color: $white;
+  }
+  &.warning {
+    color: $color_saffron_approx;
+  }
+  &.btn-warning {
+    color: $color_saffron_approx;
+  }
+  &.warning[raised] {
+    background-color: $color_saffron_approx;
+    color: $white;
+  }
+  &.btn-warning[raised] {
+    background-color: $color_saffron_approx;
+    color: $white;
+  }
+  &.error {
+    color: $color_red_orange_approx;
+  }
+  &.btn-error {
+    color: $color_red_orange_approx;
+  }
+  &.error[raised] {
+    background-color: $color_red_orange_approx;
+    color: $white;
+  }
+  &.btn-error[raised] {
+    background-color: $color_red_orange_approx;
+    color: $white;
+  }
+  &.link {
+    text-decoration: underline;
+  }
+  &.btn-link {
+    text-decoration: underline;
+  }
+}
+paper-button[primary] {
+  color: $color_dodger_blue_approx;
+}
+paper-button[primary][raised] {
+  background-color: $color_dodger_blue_approx;
+  color: $white;
+}
+paper-button[secondary] {
+  color: $color_california_approx;
+}
+paper-button[secondary][raised] {
+  background-color: $color_california_approx;
+  color: $white;
+}
+paper-button[success] {
+  color: $color_sushi_approx;
+}
+paper-button[success][raised] {
+  background-color: $color_sushi_approx;
+  color: $white;
+}
+paper-button[info] {
+  color: $color_gossamer_approx;
+}
+paper-button[info][raised] {
+  background-color: $color_gossamer_approx;
+  color: $white;
+}
+paper-button[warning] {
+  color: $color_saffron_approx;
+}
+paper-button[warning][raised] {
+  background-color: $color_saffron_approx;
+  color: $white;
+}
+paper-button[error] {
+  color: $color_red_orange_approx;
+}
+paper-button[error][raised] {
+  background-color: $color_red_orange_approx;
+  color: $white;
+}
+paper-button[link] {
+  text-decoration: underline;
+}
+paper-button[raised] {
+  color: $color_log_cabin_approx;
+}
+paper-button[disabled] {
+  color: $color_regent_gray_approx !important;
+  background: $color_star_dust_approx !important;
+}
+paper-icon-button {
+  &.primary {
+    color: $color_dodger_blue_approx;
+    &:hover {
+      @extend %paper-icon-button_primary_hover_commons;
+    }
+  }
+  &.btn-primary {
+    color: $color_dodger_blue_approx;
+    &:hover {
+      @extend %paper-icon-button_primary_hover_commons;
+    }
+  }
+  &.secondary {
+    color: $color_california_approx;
+    &:hover {
+      @extend %paper-icon-button_secondary_hover_commons;
+    }
+  }
+  &.btn-secondary {
+    color: $color_california_approx;
+    &:hover {
+      @extend %paper-icon-button_secondary_hover_commons;
+    }
+  }
+  &.success {
+    color: $color_sushi_approx;
+    &:hover {
+      @extend %paper-icon-button_success_hover_commons;
+    }
+  }
+  &.btn-success {
+    color: $color_sushi_approx;
+    &:hover {
+      @extend %paper-icon-button_success_hover_commons;
+    }
+  }
+  &.info {
+    color: $color_gossamer_approx;
+    &:hover {
+      @extend %paper-icon-button_info_hover_commons;
+    }
+  }
+  &.btn-info {
+    color: $color_gossamer_approx;
+    &:hover {
+      @extend %paper-icon-button_info_hover_commons;
+    }
+  }
+  &.warning {
+    color: $color_saffron_approx;
+    &:hover {
+      @extend %paper-icon-button_warning_hover_commons;
+    }
+  }
+  &.btn-warning {
+    color: $color_saffron_approx;
+    &:hover {
+      @extend %paper-icon-button_warning_hover_commons;
+    }
+  }
+  &.error {
+    color: $color_red_orange_approx;
+    &:hover {
+      @extend %paper-icon-button_error_hover_commons;
+    }
+  }
+  &.btn-error {
+    color: $color_red_orange_approx;
+    &:hover {
+      @extend %paper-icon-button_error_hover_commons;
+    }
+  }
+}
+paper-icon-button[primary] {
+  color: $color_dodger_blue_approx;
+  &:hover {
+    @extend %paper-icon-button_primary_hover_commons;
+  }
+}
+paper-icon-button[secondary] {
+  color: $color_california_approx;
+  &:hover {
+    @extend %paper-icon-button_secondary_hover_commons;
+  }
+}
+paper-icon-button[success] {
+  color: $color_sushi_approx;
+  &:hover {
+    @extend %paper-icon-button_success_hover_commons;
+  }
+}
+paper-icon-button[info] {
+  color: $color_gossamer_approx;
+  &:hover {
+    @extend %paper-icon-button_info_hover_commons;
+  }
+}
+paper-icon-button[warning] {
+  color: $color_saffron_approx;
+  &:hover {
+    @extend %paper-icon-button_warning_hover_commons;
+  }
+}
+paper-icon-button[error] {
+  color: $color_red_orange_approx;
+  &:hover {
+    @extend %paper-icon-button_error_hover_commons;
+  }
+}
+paper-checkbox {
+  /deep/ {
+    border-color: $white !important;
+  }
+  #checkmark.paper-checkbox {
+    border-color: $white !important;
+  }
+}
+paper-dialog {
+  color: $color_log_cabin_approx;
+  background-color: $white;
+  font-family: $default_font_stack;
+  font-weight: 400;
+  h1 {
+    @extend %paper-dialog_h_commons;
+  }
+  h2 {
+    @extend %paper-dialog_h_commons;
+  }
+  h3 {
+    @extend %paper-dialog_h_commons;
+  }
+  h4 {
+    @extend %paper-dialog_h_commons;
+  }
+  h5 {
+    @extend %paper-dialog_h_commons;
+  }
+  h6 {
+    @extend %paper-dialog_h_commons;
+  }
+}
+paper-fab {
+  --text-primary-color: $white;
+  background-color: $color_dodger_blue_approx;
+  color: $white;
+  --paper-fab-keyboard-focus-background: $color_venice_blue_approx;
+  &.primary {
+    @extend %paper-fab_primary_commons;
+  }
+  &.btn-primary {
+    @extend %paper-fab_primary_commons;
+  }
+  &.secondary {
+    @extend %paper-fab_secondary_commons;
+  }
+  &.btn-secondary {
+    @extend %paper-fab_secondary_commons;
+  }
+  &.success {
+    @extend %paper-fab_success_commons;
+  }
+  &.btn-success {
+    @extend %paper-fab_success_commons;
+  }
+  &.info {
+    @extend %paper-fab_info_commons;
+  }
+  &.btn-info {
+    @extend %paper-fab_info_commons;
+  }
+  &.warning {
+    @extend %paper-fab_warning_commons;
+  }
+  &.btn-warning {
+    @extend %paper-fab_warning_commons;
+  }
+  &.error {
+    @extend %paper-fab_error_commons;
+  }
+  &.btn-error {
+    @extend %paper-fab_error_commons;
+  }
+}
+paper-fab[primary] {
+  @extend %paper-fab_primary_commons;
+}
+paper-fab[secondary] {
+  @extend %paper-fab_secondary_commons;
+}
+paper-fab[success] {
+  @extend %paper-fab_success_commons;
+}
+paper-fab[info] {
+  @extend %paper-fab_info_commons;
+}
+paper-fab[warning] {
+  @extend %paper-fab_warning_commons;
+}
+paper-fab[error] {
+  @extend %paper-fab_error_commons;
+}
+paper-fab[disabled] {
+  color: $color_regent_gray_approx !important;
+  background: $color_star_dust_approx !important;
+}
+paper-tabs {
+  background-color: $color_dodger_blue_approx;
+  color: $white;
+}
+paper-toolbar a {
+  color: $color_log_cabin_approx;
+  &:hover {
+    color: $color_log_cabin_approx;
+  }
+  &:active {
+    color: $color_log_cabin_approx;
+  }
+  &:visited {
+    color: $color_log_cabin_approx;
+  }
+  &:focus {
+    color: $color_log_cabin_approx;
+  }
+}
+paper-checkbox::shadow #checkmark.paper-checkbox {
+  border-color: $white !important;
+}

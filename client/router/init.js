@@ -1,5 +1,4 @@
 var polymerReady;
-
 polymerReady = new ReactiveVar(false);
 
 FlowRouter.wait();
@@ -12,7 +11,7 @@ $(window).on("WebComponentsReady", function () {
 Meteor.startup(function () {
   return Tracker.autorun(function () {
     if (polymerReady.get()) {
-//      console.log("Initializing Router!");
+      console.log("Initializing Flow-Router...");
       return FlowRouter.initialize();
     }
   });

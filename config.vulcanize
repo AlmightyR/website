@@ -14,6 +14,9 @@
     "bower_components/paper-toolbar/paper-toolbar.html",
     "bower_components/iron-flex-layout/classes/iron-flex-layout.html",
     "bower_components/paper-menu/paper-menu.html",
-    "bower_components/paper-item/paper-item.html"
+    "bower_components/paper-item/paper-item.html",
+    "bower_components/iron-image/iron-image.html",
+    
+    "styles/blue-orange.html"
   ]
 }
