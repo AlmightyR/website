@@ -16,7 +16,10 @@
     "bower_components/paper-menu/paper-menu.html",
     "bower_components/paper-item/paper-item.html",
     "bower_components/iron-image/iron-image.html",
+    "bower_components/paper-card/paper-card.html",
     
-    "styles/blue-orange.html"
+    
+    
+    "styles/style.html"
   ]
 }

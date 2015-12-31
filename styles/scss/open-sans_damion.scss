@@ -1,0 +1,12 @@
+/*=====IMPORTS=====*/
+/*Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Damion);
+
+/*=====VARIABLES - FONTS=====*/
+/*Fonts*/
+$open_sans_font: "Open Sans";
+$damion_font: "Damion";
+/*Fallback Font Stacks*/
+$fallback_font_stack: "Arial", "sans-serif";
+/*Styling Font Stacks*/
+$default_font_stack: $open_sans_font, $fallback_font_stack;

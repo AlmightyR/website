@@ -1,0 +1,695 @@
+/*=====VARIABLES - COLORS=====*/
+/*primary colors*/
+$dark-primary-color: #1976D2; /*Blue-700*/
+$default-primary-color: #2196F3; /*Blue-500*/
+$light-primary-color: #BBDEFB; /*Blue-100*/ /*@UNNUSED:*/
+
+/*accent colors*/
+$dark-accent-color: #F57C00; /*Orange-700*/ /*@UNNUSED:*/
+$default-accent-color: #FF9800; /*Orange-500*/
+$light-accent-color: #FFE0B2; /*Orange-100*/ /*@UNNUSED:*/
+
+/*text colors*/
+$light-primary-text-color: #FFFFFF; /*White*/ /*@SKIPPED:*/
+$light-secondary-text-color: #F5F5F5; /*Grey-100*/ /*@SKIPPED:*/
+$dark-primary-text-color: #000000; /*Black*/
+$dark-secondary-text-color: #616161; /*Grey-700 (default: #727272)*/
+
+/*link colors*/
+$default-link-color: #00BCD4; /*Cyan-500*/
+$visited-link-color: #4DD0E1; /*Cyan-300 (light: #4DD0E1) OR Cyan-900 (dark: #006064)*/ /*@UNNUSED:*/
+
+/*situational colors*/
+$info-color: #607D8B; /*Blue Grey-500*/ /*@UNNUSED:*/
+$success-color: #4CAF50; /*Green-500*/ /*@UNNUSED:*/
+$warning-color: #FF5722; /*Deep Orange-500*/ /*@UNNUSED:*/
+$error-color: #F44336; /*Red-500*/
+
+/*background colors*/
+$primary-background-color: #FFFFFF; /*White*/
+$secondary-background-color: #F5F5F5; /*Grey-100*/
+$hero-background-color: #F5F5F5; /*Grey-100*/
+
+/*other colors*/
+$disabled-color: #E0E0E0; /*Grey-300*/
+$divider-color: #B6B6B6; /*(default: #B6B6B6)*/
+
+
+
+
+
+//colors
+$dark-primary-text-color: #000000;
+$primary-background-color: #ffffff;
+$hero-background-color: #f5f5f5;
+$dark-secondary-text-color: #616161;
+$default-link-color: #00bcd4;
+$color_5: #3ea1e6;
+$color_6: #7ec0ee;
+$color_7: #c5cae9;
+$color_8: #ff4081;
+$color_9: #7e8d9d; /*disabled or dark-disabled*/
+$color_10: #e0e0e0; /*disabled or dark-disabled background*/
+$default-primary-color: #2196f3;
+$color_12: #a8aca5;
+$color_13: #db5656;
+$color_14: #fafafa;
+$color_15: #212121;
+$dark-primary-color: #1976d2;
+$color_17: #64b5f6;
+$color_18: white;
+$color_19: #424540;
+$color_20: #ffc107;
+$light-primary-text-color: #fff;
+$color_22: #1e364a;
+$color_23: #8bc34a;
+$default-accent-color: #ff9800;
+$error-color: #f44336;
+$color_26: #e9f5fe;
+$color_27: rgba(33, 150, 243, 0.2);
+$color_28: #f0f8fe;
+$color_29: rgba(100, 181, 246, 0.2);
+$color_30: #f3f9ed;
+$color_31: rgba(139, 195, 74, 0.2);
+$color_32: #fff5e6;
+$color_33: rgba(255, 152, 0, 0.2);
+$color_34: #feeceb;
+$color_35: rgba(244, 67, 54, 0.2);
+$color_36: #08528d;
+$color_37: #0c78cf;
+$color_38: #496a23;
+$color_39: #804c00;
+$default-link-color0: #a21309;
+
+/*=====COMMON PROPERTIES EXTENSIONS======*/
+//original selectors: html, body
+%commons_global {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	color: $dark-primary-text-color;
+	background-color: $primary-background-color;
+	font-family: $default_font_stack;
+	font-weight: 400;
+}
+
+//original selectors: h1, h2, h3, h4, h5, h6
+%commons_h {
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+//original selectors: paper-icon-button.primary:hover, paper-icon-button.btn-primary:hover, paper-icon-button[primary]:hover
+%commons_paper-icon-button_primary_hover {
+	background-color: $color_26;
+	background-color: $color_27;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-icon-button.secondary:hover, paper-icon-button.btn-secondary:hover, paper-icon-button[secondary]:hover
+%commons_paper-icon-button_secondary_hover {
+	background-color: $color_28;
+	background-color: $color_29;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-icon-button.success:hover, paper-icon-button.btn-success:hover, paper-icon-button[success]:hover
+%commons_paper-icon-button_success_hover {
+	background-color: $color_31;
+	background-color: $color_31;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-icon-button.info:hover, paper-icon-button.btn-info:hover, paper-icon-button[info]:hover
+%commons_paper-icon-button_info_hover {
+	background-color: $color_26;
+	background-color: $color_27;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-icon-button.warning:hover, paper-icon-button.btn-warning:hover, paper-icon-button[warning]:hover
+%commons_paper-icon-button_warning_hover {
+	background-color: $color_31;
+	background-color: $color_31;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-icon-button.error:hover, paper-icon-button.btn-error:hover, paper-icon-button[error]:hover
+%commons_paper-icon-button_error_hover {
+	background-color: $color_31;
+	background-color: $color_31;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+
+//original selectors: paper-dialog h1, paper-dialog h2, paper-dialog h3, paper-dialog h4, paper-dialog h5, paper-dialog h6
+%commons_paper-dialog_h {
+	overflow: visible;
+	padding: 0 1em;
+	text-align: center;
+}
+
+//original selectors: paper-fab.primary, paper-fab.btn-primary, paper-fab[primary]
+%commons_paper-fab_primary {
+	background-color: $default-primary-color;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $color_31;
+}
+
+//original selectors: paper-fab.secondary, paper-fab.btn-secondary, paper-fab[secondary]
+%commons_paper-fab_secondary {
+	background-color: $color_17;
+	color: $color_22;
+	--paper-fab-keyboard-focus-background: $color_31;
+}
+
+//original selectors: paper-fab.success, paper-fab.btn-success, paper-fab[success]
+%commons_paper-fab_success {
+	background-color: $color_23;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $color_31;
+}
+
+//original selectors: paper-fab.info, paper-fab.btn-info, paper-fab[info]
+%commons_paper-fab_info {
+	background-color: $default-primary-color;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $color_31;
+}
+
+//original selectors: paper-fab.warning, paper-fab.btn-warning, paper-fab[warning]
+%commons_paper-fab_warning {
+	background-color: $default-accent-color;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $color_31;
+}
+
+//original selectors: paper-fab.error, paper-fab.btn-error, paper-fab[error]
+%commons_paper-fab_error {
+	background-color: $error-color;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $default-link-color0;
+}
+
+/*=====CSS PROPERTIES=====*/
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 16px;
+	@extend %commons_global;
+}
+body {
+	@extend %commons_global;
+}
+section {
+	padding: 40px 0;
+	&.hero paper-menu {
+		--paper-menu-background-color: $color_14;
+	}
+}
+section[hero] {
+	background-color: $hero-background-color;
+	paper-menu {
+		--paper-menu-background-color: $color_14;
+	}
+}
+h1 {
+	@extend %commons_h;
+	font-family: $default_font_stack;
+	font-size: 50px;
+	margin: 30px 0;
+}
+h2 {
+	@extend %commons_h;
+	color: $dark-secondary-text-color;
+	font-size: 35px;
+	margin: 20px 0;
+}
+h3 {
+	@extend %commons_h;
+	font-family: $default_font_stack;
+	font-size: 25px;
+	margin: 15px 0;
+}
+h4 {
+	@extend %commons_h;
+	font-size: 20px;
+}
+h5 {
+	@extend %commons_h;
+	font-family: $default_font_stack;
+}
+h6 {
+	@extend %commons_h;
+}
+a {
+	color: $default-link-color;
+	text-decoration: none;
+	&:active {
+		color: $default-link-color;
+		text-decoration: none;
+	}
+	&:visited {
+		color: $default-link-color;
+		text-decoration: none;
+	}
+	&:focus {
+		color: $default-link-color;
+		text-decoration: none;
+	}
+	&:hover {
+		color: $default-link-color;
+		text-decoration: underline;
+	}
+}
+:root {
+	--default-primary-color: $color_5;
+	--dark-primary-color: $color_6;
+	--light-primary-color: $color_7;
+	--text-primary-color: $primary-background-color;
+	--accent-color: $color_8;
+	--primary-background-color: $primary-background-color;
+	--primary-text-color: $dark-primary-text-color;
+	--secondary-text-color: $dark-secondary-text-color;
+	--disabled-text-color: $color_9;
+	--divider-color: $color_10;
+	--paper-checkbox-checked-color: $default-primary-color;
+	--paper-checkbox-checked-ink-color: $color_5;
+	--paper-checkbox-unchecked-color: $color_10;
+	--paper-checkbox-unchecked-ink-color: $color_9;
+	--paper-checkbox-label-color: $dark-primary-text-color;
+	--paper-fab-background: $color_5;
+	--paper-fab-disabled-background: $color_10;
+	--paper-fab-disabled-text: $color_9;
+	--paper-icon-button-disabled-text: $color_10;
+	--paper-input-container-color: $color_12;
+	--paper-input-container-focus-color: $color_5;
+	--paper-input-container-invalid-color: $color_13;
+	--paper-input-container-input-color: $color_12;
+	--paper-menu-background-color: $color_14;
+	--paper-menu-color: $color_15;
+	--paper-menu-disabled-color: $color_10;
+	--paper-progress-active-color: $dark-primary-color;
+	--paper-progress-secondary-color: $color_17;
+	--paper-radio-button-checked-color: $default-primary-color;
+	--paper-radio-button-checked-ink-color: $color_18;
+	--paper-radio-button-unchecked-color: $color_10;
+	--paper-radio-button-unchecked-ink-color: $color_19;
+	--paper-radio-button-label-color: $dark-primary-text-color;
+	--paper-slider-knob-color: $default-primary-color;
+	--paper-slider-active-color: $default-primary-color;
+	--paper-slider-pin-color: $default-primary-color;
+	--paper-spinner-layer-1-color: $default-primary-color;
+	--paper-spinner-layer-2-color: $default-primary-color;
+	--paper-spinner-layer-3-color: $default-primary-color;
+	--paper-spinner-layer-4-color: $default-primary-color;
+	--paper-tabs-selection-bar-color: $color_20;
+	--paper-tab-ink: $color_20;
+	--paper-toggle-button-checked-bar-color: $default-primary-color;
+	--paper-toggle-button-checked-button-color: $default-primary-color;
+	--paper-toggle-button-checked-ink-color: $default-primary-color;
+	--paper-toggle-button-unchecked-bar-color: $color_10;
+	--paper-toggle-button-unchecked-button-color: $primary-background-color;
+	--paper-toggle-button-unchecked-ink-color: $primary-background-color;
+	--paper-toolbar-background: $default-primary-color;
+	--paper-toolbar-color: $primary-background-color;
+}
+paper-button {
+	&.primary {
+		color: $default-primary-color;
+	}
+	&.btn-primary {
+		color: $default-primary-color;
+	}
+	&.primary[raised] {
+		background-color: $default-primary-color;
+		color: $light-primary-text-color;
+	}
+	&.btn-primary[raised] {
+		background-color: $default-primary-color;
+		color: $light-primary-text-color;
+	}
+	&.secondary {
+		color: $color_17;
+	}
+	&.btn-secondary {
+		color: $color_17;
+	}
+	&.secondary[raised] {
+		background-color: $color_17;
+		color: $color_22;
+	}
+	&.btn-secondary[raised] {
+		background-color: $color_17;
+		color: $color_22;
+	}
+	&.success {
+		color: $color_23;
+	}
+	&.btn-success {
+		color: $color_23;
+	}
+	&.success[raised] {
+		background-color: $color_23;
+		color: $light-primary-text-color;
+	}
+	&.btn-success[raised] {
+		background-color: $color_23;
+		color: $light-primary-text-color;
+	}
+	&.info {
+		color: $default-primary-color;
+	}
+	&.btn-info {
+		color: $default-primary-color;
+	}
+	&.info[raised] {
+		background-color: $default-primary-color;
+		color: $light-primary-text-color;
+	}
+	&.btn-info[raised] {
+		background-color: $default-primary-color;
+		color: $light-primary-text-color;
+	}
+	&.warning {
+		color: $default-accent-color;
+	}
+	&.btn-warning {
+		color: $default-accent-color;
+	}
+	&.warning[raised] {
+		background-color: $default-accent-color;
+		color: $light-primary-text-color;
+	}
+	&.btn-warning[raised] {
+		background-color: $default-accent-color;
+		color: $light-primary-text-color;
+	}
+	&.error {
+		color: $error-color;
+	}
+	&.btn-error {
+		color: $error-color;
+	}
+	&.error[raised] {
+		background-color: $error-color;
+		color: $light-primary-text-color;
+	}
+	&.btn-error[raised] {
+		background-color: $error-color;
+		color: $light-primary-text-color;
+	}
+	&.link {
+		text-decoration: underline;
+	}
+	&.btn-link {
+		text-decoration: underline;
+	}
+}
+paper-button[primary] {
+	color: $default-primary-color;
+}
+paper-button[primary][raised] {
+	background-color: $default-primary-color;
+	color: $light-primary-text-color;
+}
+paper-button[secondary] {
+	color: $color_17;
+}
+paper-button[secondary][raised] {
+	background-color: $color_17;
+	color: $color_22;
+}
+paper-button[success] {
+	color: $color_23;
+}
+paper-button[success][raised] {
+	background-color: $color_23;
+	color: $light-primary-text-color;
+}
+paper-button[info] {
+	color: $default-primary-color;
+}
+paper-button[info][raised] {
+	background-color: $default-primary-color;
+	color: $light-primary-text-color;
+}
+paper-button[warning] {
+	color: $default-accent-color;
+}
+paper-button[warning][raised] {
+	background-color: $default-accent-color;
+	color: $light-primary-text-color;
+}
+paper-button[error] {
+	color: $error-color;
+}
+paper-button[error][raised] {
+	background-color: $error-color;
+	color: $light-primary-text-color;
+}
+paper-button[link] {
+	text-decoration: underline;
+}
+paper-button[raised] {
+	color: $dark-primary-text-color;
+}
+paper-button[disabled] {
+	color: $color_9 !important;
+	background: $color_10 !important;
+}
+paper-icon-button {
+	&.primary {
+		color: $default-primary-color;
+		&:hover {
+			@extend %commons_paper-icon-button_primary_hover;
+		}
+	}
+	&.btn-primary {
+		color: $default-primary-color;
+		&:hover {
+			@extend %commons_paper-icon-button_primary_hover;
+		}
+	}
+	&.secondary {
+		color: $color_17;
+		&:hover {
+			@extend %commons_paper-icon-button_secondary_hover;
+		}
+	}
+	&.btn-secondary {
+		color: $color_17;
+		&:hover {
+			@extend %commons_paper-icon-button_secondary_hover;
+		}
+	}
+	&.success {
+		color: $color_23;
+		&:hover {
+			@extend %commons_paper-icon-button_success_hover;
+		}
+	}
+	&.btn-success {
+		color: $color_23;
+		&:hover {
+			@extend %commons_paper-icon-button_success_hover;
+		}
+	}
+	&.info {
+		color: $default-primary-color;
+		&:hover {
+			@extend %commons_paper-icon-button_info_hover;
+		}
+	}
+	&.btn-info {
+		color: $default-primary-color;
+		&:hover {
+			@extend %commons_paper-icon-button_info_hover;
+		}
+	}
+	&.warning {
+		color: $default-accent-color;
+		&:hover {
+			@extend %commons_paper-icon-button_warning_hover;
+		}
+	}
+	&.btn-warning {
+		color: $default-accent-color;
+		&:hover {
+			@extend %commons_paper-icon-button_warning_hover;
+		}
+	}
+	&.error {
+		color: $error-color;
+		&:hover {
+			@extend %commons_paper-icon-button_error_hover;
+		}
+	}
+	&.btn-error {
+		color: $error-color;
+		&:hover {
+			@extend %commons_paper-icon-button_error_hover;
+		}
+	}
+}
+paper-icon-button[primary] {
+	color: $default-primary-color;
+	&:hover {
+		@extend %commons_paper-icon-button_primary_hover;
+	}
+}
+paper-icon-button[secondary] {
+	color: $color_17;
+	&:hover {
+		@extend %commons_paper-icon-button_secondary_hover;
+	}
+}
+paper-icon-button[success] {
+	color: $color_23;
+	&:hover {
+		@extend %commons_paper-icon-button_success_hover;
+	}
+}
+paper-icon-button[info] {
+	color: $default-primary-color;
+	&:hover {
+		@extend %commons_paper-icon-button_info_hover;
+	}
+}
+paper-icon-button[warning] {
+	color: $default-accent-color;
+	&:hover {
+		@extend %commons_paper-icon-button_warning_hover;
+	}
+}
+paper-icon-button[error] {
+	color: $error-color;
+	&:hover {
+		@extend %commons_paper-icon-button_error_hover;
+	}
+}
+paper-checkbox {
+	/deep/ {
+		border-color: $light-primary-text-color !important;
+	}
+	#checkmark.paper-checkbox {
+		border-color: $light-primary-text-color !important;
+	}
+}
+paper-dialog {
+	color: $dark-primary-text-color;
+	background-color: $primary-background-color;
+	font-family: $default_font_stack;
+	font-weight: 400;
+	h1 {
+		@extend %commons_paper-dialog_h;
+	}
+	h2 {
+		@extend %commons_paper-dialog_h;
+	}
+	h3 {
+		@extend %commons_paper-dialog_h;
+	}
+	h4 {
+		@extend %commons_paper-dialog_h;
+	}
+	h5 {
+		@extend %commons_paper-dialog_h;
+	}
+	h6 {
+		@extend %commons_paper-dialog_h;
+	}
+}
+paper-fab {
+	--text-primary-color: $primary-background-color;
+	background-color: $default-primary-color;
+	color: $light-primary-text-color;
+	--paper-fab-keyboard-focus-background: $color_31;
+	&.primary {
+		@extend %commons_paper-fab_primary;
+	}
+	&.btn-primary {
+		@extend %commons_paper-fab_primary;
+	}
+	&.secondary {
+		@extend %commons_paper-fab_secondary;
+	}
+	&.btn-secondary {
+		@extend %commons_paper-fab_secondary;
+	}
+	&.success {
+		@extend %commons_paper-fab_success;
+	}
+	&.btn-success {
+		@extend %commons_paper-fab_success;
+	}
+	&.info {
+		@extend %commons_paper-fab_info;
+	}
+	&.btn-info {
+		@extend %commons_paper-fab_info;
+	}
+	&.warning {
+		@extend %commons_paper-fab_warning;
+	}
+	&.btn-warning {
+		@extend %commons_paper-fab_warning;
+	}
+	&.error {
+		@extend %commons_paper-fab_error;
+	}
+	&.btn-error {
+		@extend %commons_paper-fab_error;
+	}
+}
+paper-fab[primary] {
+	@extend %commons_paper-fab_primary;
+}
+paper-fab[secondary] {
+	@extend %commons_paper-fab_secondary;
+}
+paper-fab[success] {
+	@extend %commons_paper-fab_success;
+}
+paper-fab[info] {
+	@extend %commons_paper-fab_info;
+}
+paper-fab[warning] {
+	@extend %commons_paper-fab_warning;
+}
+paper-fab[error] {
+	@extend %commons_paper-fab_error;
+}
+paper-fab[disabled] {
+	color: $color_9 !important;
+	background: $color_10 !important;
+}
+paper-tabs {
+	background-color: $default-primary-color;
+	color: $primary-background-color;
+}
+paper-toolbar a {
+	color: $primary-background-color;
+	&:hover {
+		color: $primary-background-color;
+	}
+	&:active {
+		color: $primary-background-color;
+	}
+	&:visited {
+		color: $primary-background-color;
+	}
+	&:focus {
+		color: $primary-background-color;
+	}
+}
+paper-checkbox::shadow #checkmark.paper-checkbox {
+	border-color: $light-primary-text-color !important;
+}

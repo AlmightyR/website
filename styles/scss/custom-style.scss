@@ -1,0 +1,19 @@
+/*=====IMPORTS=====*/
+/*Fonts:*/
+@import "open-sans_damion.scss";
+/*Theme:*/
+@import "blue-orange.scss";
+
+/*=====CUSTOM PROPERTIES=====*/
+.accent-border {
+  border-color: #FF9800; /*Orange-500*/
+}
+
+.border-chanfer {
+  /*border-radius: 0.25rem;*/
+  border-radius: 4px;
+}
+
+.img-circle {
+  border-radius: 50%;
+}

@@ -1,0 +1,35 @@
+/*improved(?) polymer color variables*/
+:root {
+  /*primary colors*/
+  --dark-primary-color: #1976D2; /*Blue-700*/
+  --default-primary-color: #2196F3; /*Blue-500*/
+  --light-primary-color: #BBDEFB; /*Blue-100*/
+
+  /*accent colors*/
+  --dark-accent-color: #F57C00; /*Orange-700*/
+  --default-accent-color: #FF9800; /*Orange-500*/
+  --light-accent-color: #FFE0B2; /*Orange-100*/
+
+  /*text colors*/
+  --light-primary-text-color: #FFFFFF; /*White*/
+  --light-secondary-text-color: #F5F5F5; /*Grey-100*/
+  --dark-primary-text-color: #212121; /*Grey-900 (or Black?)*/
+  --dark-secondary-text-color: #616161; /*Grey-700 (or Grey-800?) (default: #727272)*/
+  
+  /*link colors*/
+  --default-link-color: #00BCD4; /*Cyan-500*/
+  --visited-link-color: #4DD0E1; /*Cyan-300 (light: #4DD0E1) OR Cyan-900 (dark: #006064)*/
+
+  /*situational colors*/
+  --info-color: #607D8B; /*Blue Grey-500*/
+  --success-color: #4CAF50; /*Green-500*/
+  --warning-color: #FF5722; /*Deep Orange-500*/
+  --error-color: #F44336; /*Red-500*/
+
+  /*background colors*/
+  --primary-background-color: #BBDEFB; /*#BBDEFB*/
+
+  /*other colors*/
+  --disabled-color: #BDBDBD; /*Grey-400*/
+  --divider-color: #B6B6B6; /*#B6B6B6*/
+}
